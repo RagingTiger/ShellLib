@@ -53,7 +53,7 @@ remove_file() {
   if exists; then
     # get answer
     answer=
-    echo "Delete $cmdname file?[y|n]: \c"
+    echo -n "Delete $cmdname file?[y|n]: "
     read answer
 
     # check answer
@@ -93,7 +93,7 @@ template() {
 
   # ask about editing
   answer=
-  echo "Would you like to open and start editing new $cmdname file?[y|n]: \c"
+  echo -n "Would you like to open and start editing new $cmdname file?[y|n]: "
   read answer
 
   # check answer
@@ -106,7 +106,7 @@ template() {
 create() {
   # create new todolist?
   local answer
-  echo "No $cmdname file found. Create one?[y|n]: \c"
+  echo -n "No $cmdname file found. Create one?[y|n]: "
   read answer
 
   # check answer
